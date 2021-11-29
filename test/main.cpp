@@ -1,7 +1,6 @@
 #include <iostream>
-#include "ext/googletest/googletest/include/gtest/gtest.h"
+#include <gtest/gtest.h>
 
-using namespace std;
 
 int main(int argc, char *argv[]) {
 

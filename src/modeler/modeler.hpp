@@ -9,17 +9,17 @@
 #include "../constrainer/constrainer.hpp"
 #include "dubins/dubins.hpp"
 
-#include "../../ext/Eigen/Dense"
+#include "Eigen/Dense"
 
 namespace modeler{
 
-/*
- * \class Waypoint
- *
- * \brief Holds data regarding to a waypoint and dynamics related aircraft data
- * over that waypoint
- *
- */
+        /*
+         * \class Waypoint
+         *
+         * \brief Holds data regarding to a waypoint and dynamics related aircraft data
+         * over that waypoint
+         *
+         */
 
         class Waypoint{
 
@@ -30,7 +30,7 @@ namespace modeler{
 
                 public:
                         Waypoint(double heading,
-                                 std::vector<double> coordinates):
+                                        std::vector<double> coordinates):
                                 heading(heading),
                                 coordinates(coordinates){};
 
@@ -42,13 +42,13 @@ namespace modeler{
 
         };
 
-/*
- * \class Route
- *
- * \brief Calculates a trajectory using a predefined tecnique (the default
- * combines 2D Dubins curves with 3D Bezier curves for softening)
- *
- */
+        /*
+         * \class Route
+         *
+         * \brief Calculates a trajectory using a predefined tecnique (the default
+         * combines 2D Dubins curves with 3D Bezier curves for softening)
+         *
+         */
 
         class Route{
 
@@ -57,11 +57,11 @@ namespace modeler{
                         std::shared_ptr<std::vector<double>> headings;
                         std::shared_ptr<std::vector<double>> turn_radius;
                         std::shared_ptr<std::vector<std::vector<double>>> control_waypoints_coords;/**<
-                                                                                     *  Control points to
-                                                                                     *  create the complete
-                                                                                     *  route
-                                                                                     *
-                                                                                     */
+                                                                                                    *  Control points to
+                                                                                                    *  create the complete
+                                                                                                    *  route
+                                                                                                    *
+                                                                                                    */
 
                         std::shared_ptr<std::vector<std::vector<double>>> route; /**<
                                                                                   *   Complete route points
@@ -124,8 +124,8 @@ namespace modeler{
                         Route(){};
 
                         Route(int resolution,
-                              std::shared_ptr<std::vector<double>> headings,
-                              std::shared_ptr<std::vector<std::vector<double>>> control_waypoints_coords):
+                                        std::shared_ptr<std::vector<double>> headings,
+                                        std::shared_ptr<std::vector<std::vector<double>>> control_waypoints_coords):
                                 resolution(resolution),
                                 headings(headings),
                                 control_waypoints_coords(control_waypoints_coords){};
@@ -145,12 +145,12 @@ namespace modeler{
         };
 
 
-/*
- * \class Modeler
- *
- * \brief Interface to calculate and model a trajectory
- *
- */
+        /*
+         * \class Modeler
+         *
+         * \brief Interface to calculate and model a trajectory
+         *
+         */
 
         class Modeler{
 

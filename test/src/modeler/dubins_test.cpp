@@ -1,4 +1,4 @@
-#include "../../ext/googletest/googletest/include/gtest/gtest.h"
+#include <gtest/gtest.h>
 
 #define private public
 #include "../../../src/modeler/dubins/dubins.hpp"

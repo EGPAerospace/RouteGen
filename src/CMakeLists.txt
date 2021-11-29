@@ -21,7 +21,7 @@ target_link_libraries (routegen
   generator
   modeler
   mapper
-  ${PARADISEO_LIBRARIES})
+)
 
 # Path to install generated binary
 install(TARGETS routegen DESTINATION ${ROUTEGEN_INSTALL_BIN_DIR})

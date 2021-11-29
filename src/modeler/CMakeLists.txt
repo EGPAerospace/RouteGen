@@ -1,5 +1,8 @@
 project (modeler)
 
+# Required external packages
+find_package(Eigen3)
+
 #Adding subdirectories
 add_subdirectory (dubins)
 add_subdirectory (bezier)
@@ -15,7 +18,7 @@ add_library(modeler STATIC ${SOURCE_FILES})
 
 # Linking created libraries in subfolders
 target_link_libraries (
-  modeler dubins bezier
+  modeler dubins bezier Eigen3::Eigen
 )
 
 
